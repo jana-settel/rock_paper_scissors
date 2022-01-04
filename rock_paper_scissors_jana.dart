@@ -19,8 +19,7 @@ void main() {
       }
       final random = rng.nextInt(3);
       final aiMove = Move.values[random];
-      // print('Select: ${playerMove.name}');
-      // print('AI select: ${aiMove.name}');
+
       print(
           'You chose ${playerMove.name} and the machine chose ${aiMove.name}');
       if (playerMove == aiMove) {
