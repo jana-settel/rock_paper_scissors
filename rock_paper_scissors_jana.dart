@@ -24,18 +24,14 @@ void main() {
           'You chose ${playerMove.name} and the machine chose ${aiMove.name}');
       if (playerMove == aiMove) {
         print("It's a draw");
-      } else if (playerMove == Move.rock && aiMove == Move.scissors) {
+      } else if (playerMove == Move.rock && aiMove == Move.scissors ||
+          playerMove == Move.scissors && aiMove == Move.paper ||
+          playerMove == Move.paper && aiMove == Move.rock) {
         print("You win");
-      } else if (playerMove == Move.rock && aiMove == Move.paper) {
+      } else if (playerMove == Move.rock && aiMove == Move.paper ||
+          playerMove == Move.scissors && aiMove == Move.rock ||
+          playerMove == Move.paper && aiMove == Move.scissors) {
         print("Kaputiaste");
-      } else if (playerMove == Move.scissors && aiMove == Move.rock) {
-        print("Kaputiaste");
-      } else if (playerMove == Move.scissors && aiMove == Move.paper) {
-        print("You win");
-      } else if (playerMove == Move.paper && aiMove == Move.scissors) {
-        print("Kaputiaste");
-      } else if (playerMove == Move.paper && aiMove == Move.rock) {
-        print("You win");
       }
     } else if (input == 'q') {
       break;
