@@ -28,9 +28,7 @@ void main() {
           playerMove == Move.scissors && aiMove == Move.paper ||
           playerMove == Move.paper && aiMove == Move.rock) {
         print("You win");
-      } else if (playerMove == Move.rock && aiMove == Move.paper ||
-          playerMove == Move.scissors && aiMove == Move.rock ||
-          playerMove == Move.paper && aiMove == Move.scissors) {
+      } else {
         print("Kaputiaste");
       }
     } else if (input == 'q') {
